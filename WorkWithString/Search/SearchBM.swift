@@ -10,7 +10,7 @@ final class SearchBM: Search {
         // Подготовка таблицы плохого символа (Bad Character Table)
         let maskLength = mask.count
         for i in 0..<maskLength {
-            if let char = mask[i] {  // Используем ваш субскрипт для получения символа по индексу
+            if let char = mask[i] {
                 badCharTable[char] = maskLength - i - 1
             }
         }
@@ -52,6 +52,6 @@ final class SearchBM: Search {
             }
         }
         
-        return -1 // Совпадений не найдено
+        return -1
     }
 }
